@@ -32,6 +32,16 @@ ul{
     list-style: none; /* видалить всі точки перед словами */
 }
 
+@keyframes rotator {
+    0% {
+    transform: rotate(0);
+    }
+
+    100% {
+    transform: rotate(360deg);
+    }
+}
+
 
 /* header */
 
@@ -96,6 +106,7 @@ ul{
     letter-spacing: 0.02em;
     color: var(--accent-color);
     text-decoration: none;
+    position: relative;
 } 
 
 .list-html:hover {  
@@ -108,6 +119,19 @@ ul{
     outline: 0;
 } 
 
+.list-html.current::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: var(--accent-color);
+    border-radius: 2px;
+    left: 0;
+    bottom: -28px;
+
+}
+
 
 .list-html-label.current {
     font-weight: 500;
@@ -116,6 +140,7 @@ ul{
     letter-spacing: 0.02em;
     color: var(--accent-color);
     text-decoration: none;
+    position: relative;
 }
 
 .list-html-label:focus {
@@ -127,6 +152,18 @@ ul{
 .list-html-label:hover {  
     color: var(--title-text-color);
 } 
+
+.list-html-label::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: var(--accent-color);
+    border-radius: 2px;
+    left: 0;
+    bottom: -28px;
+}
 
 /*.list-html::after {
     content: '';
@@ -158,9 +195,6 @@ ul{
     background-color: var(--white-color);;
     outline: 0;
 }
-
-
-
 
 .header-contact {
     margin-left: auto;
@@ -198,7 +232,17 @@ ul{
     margin-right: 10px;
 }
 
-
+.hookup {
+    /* transition-property: transform, background-color;
+     transition-duration: 1000ms;
+     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
+     transition: transform(0) 250ms cubic-bezier(0.4, 0, 0.2, 1);
+ }
+ 
+ .hookup:hover {
+     transform: scale(1.5);
+     /*background-color: greenyellow;*/
+ }
 
 
 /*.email::after {
@@ -425,6 +469,11 @@ ul{
     color: var(--primary-text-color);
 }
 
+
+
+
+
+
 /*section-foto*/
 
 .foto-section {
@@ -446,6 +495,34 @@ ul{
     display: flex;
     gap: 30px;
 }
+
+.annex-des {
+   position: relative;
+}
+
+.annex.text {
+    position: absolute;
+    bottom: 10px;
+    left: 4px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    background-color: rgba(47, 48, 58, 0.8);
+    padding-top: 27px;
+    height: 70px;
+    width: 363px; 
+}
+
+
+
+
+
 
 
 
@@ -528,6 +605,19 @@ ul{
     height: 44px;
 }
 
+.figure {
+    /* transition-property: transform, background-color;
+     transition-duration: 1000ms;
+     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
+     transition: transform(0) 250ms cubic-bezier(0.4, 0, 0.2, 1);
+ }
+ 
+ .figure:hover {
+     transform: scale(1.5);
+     /*background-color: greenyellow;*/
+ }
+ 
+
 .barbers-cos-link {
     width: 100%;
     height: 100%;
@@ -607,6 +697,18 @@ ul{
     height: 92px;
     width: calc(100%-150px) / 6;
     height: 92px;
+}
+
+.clients {
+   /* transition-property: transform, background-color;
+    transition-duration: 1000ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.clients:hover {
+    transform: rotate(180deg);
+    /*background-color: greenyellow;*/
 }
 
 .client-cos-link {
@@ -775,6 +877,21 @@ ul{
     height: 44px;
 }
 
+
+.glob {
+    /* transition-property: transform, background-color;
+     transition-duration: 1000ms;
+     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
+     transition: transform(0) 250ms cubic-bezier(0.4, 0, 0.2, 1);
+ }
+ 
+ .glob:hover {
+     transform: skew(25deg);
+     /*background-color: greenyellow;*/
+ }
+
+
+
 .links-cos-link {
     width: 100%;
     height: 100%;
@@ -794,6 +911,61 @@ ul{
     background-color: var(--accent-color);
     outline: 0;
 }
+
+.backdrop {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);;
+    position: fixed;    /* затемнення завжди на екрані */
+    top: 0;
+    transition: opacity 250ms linear, visibility 1000ms linear;
+}
+
+.modal {
+    width: 528px;           
+    height: 581px;      /* min-height - це вірно  */
+    border-radius: 4px;
+    background-color: #FFFFFF;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0);
+    transition: transform 250ms linear, border-radius 250ms linear;
+}
+
+.backdrop.is-hidden .modal {
+    transform: translate(-50%, -50%) rotate(-360deg);
+    border-radius: 50%;
+}
+
+.modal-close {
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border: 1px solid #00000023;
+    border-radius: 50%;
+    position: absolute;
+    right: 15px;
+    top: 7px;
+                    /* від центрувати */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.modal-close:hover {
+    border: 1px solid var(--accent-color);
+}
+
+.backdrop.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+
+
 
 
 
@@ -856,6 +1028,19 @@ ul{
     background-repeat: no-repeat;
     background-position: 25px;
 }*/
+
+.rectangle {
+    /* transition-property: transform, background-color;
+     transition-duration: 1000ms;
+     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
+     transition: transform(0) 250ms cubic-bezier(0.4, 0, 0.2, 1);
+ }
+ 
+ .rectangle:hover {
+     transform: scaleY(2);
+     /*background-color: greenyellow;*/
+ }
+
 
 .button-portfolio {
     font-family: 'Roboto';
@@ -924,6 +1109,37 @@ ul{
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }*/
 
+.top-text-wrap {
+    position: relative;     /* привязуємо до картинки */
+    overflow: hidden;       /* все за кордоном батька приховати */
+    transition-property: background-color, transform;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+.top-text-wrap:hover .top-text {
+    transform: translateY(0);
+}
+
+.top-text {
+    position: absolute;     /*  текст над картинкою */
+    top: 0;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.55;
+    letter-spacing: 0.03em;
+    color: #FFFFFF;
+    background-color: rgba(33, 150, 243, 0.9);;
+    padding-top: 63px;
+    padding-left: 24px;
+    height: 100%;
+    transform: translateY(100%);        /* опустити до низу */
+    transition: transform 300ms linear;
+    overflow: auto;                 /* якщо тексту забагато і не влазить */
+}
 
 .text-frame {
     width: 370px;
