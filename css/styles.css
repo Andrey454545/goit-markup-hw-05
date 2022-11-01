@@ -129,9 +129,7 @@ ul{
     border-radius: 2px;
     left: 0;
     bottom: -28px;
-
 }
-
 
 .list-html-label.current {
     font-weight: 500;
@@ -185,7 +183,6 @@ ul{
     text-decoration: none;
 }
 
-
 .block:hover {
     color: var(--accent-color);
 }
@@ -236,11 +233,11 @@ ul{
     /* transition-property: transform, background-color;
      transition-duration: 1000ms;
      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
-     transition: transform(0) 250ms cubic-bezier(0.4, 0, 0.2, 1);
+     transition: transform(0) 900ms cubic-bezier(0.4, 0, 0.2, 1);
  }
  
  .hookup:hover {
-     transform: scale(1.5);
+     transform: scale(1.8);
      /*background-color: greenyellow;*/
  }
 
@@ -263,7 +260,7 @@ ul{
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: var(--primary-text-color);
-    text-decoration: none;
+    text-decoration: none;          /* прибрати підкреслення */
     margin-right: 50px;
 }
 
@@ -273,12 +270,45 @@ ul{
     outline: 0;
 }
 
-.email-label::before {
+/*.email-label::before {
     content: '';
     display: inline-block;
     width: 16px;
     height: 12px;
     background-image: url(../img/envelope.png);
+    margin-right: 10px;
+}*/
+
+/*.number:hover,
+.number:focus {
+    color: var(--accent-color);
+    background-color: inherit;
+    outline: 0;
+}*/
+
+/*.number::before {
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 16px;
+    background-image: url('../img/smartphone.png');
+    /*align-items: baseline;   
+    margin-right: 10px;
+}*/
+
+.apple {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-text-color);
+}
+
+.apple:hover {
+    color: #2196F3;
+}
+
+.number-icon {
+    fill: currentColor;
     margin-right: 10px;
 }
 
@@ -288,26 +318,55 @@ ul{
     line-height: 1.71;
     letter-spacing: 0.03em;
     color: var(--primary-text-color);
-    text-decoration: none;      /* прибрати підкреслення */
+    text-decoration: none;      
+    display: flex;
+    align-items: center;
 }
 
 .number:hover,
-.number:focus {
+.number:focus,
+.number-icon:hover,
+.number-icon:focus {
+    fill: var(--accent-color); 
     color: var(--accent-color);
-    background-color: inherit;
     outline: 0;
 }
 
-.number::before {
-    content: '';
-    display: inline-block;
-    width: 10px;
-    height: 16px;
-    background-image: url('../img/smartphone.png');
-    /*align-items: baseline;*/   /* вирівнювання по лінії букв */
-    margin-right: 10px;
+
+.barbers-cos-link {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
+.link {
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.barbers-cos-link:hover,
+.barbers-cos-link:focus {
+    background-color: var(--accent-color); 
+    outline: 0; 
+}
+
+.barbers-cos-icon {
+    fill: #AFB1B8;
+}
+
+.link:hover .barbers-cos-icon {
+    fill: #FFFFFF;
+}
+
+.link:focus .barbers-cos-icon {
+   fill: #FFFFFF;
+   
+}
 
 /*margin: 0 auto;    розміщення по середині*/
 
@@ -377,8 +436,11 @@ ul{
 
 
 
+
+
 /*  descrip  */
                 /*прихований заголовок*/
+                
 .descrip-section {
     padding-top: 94px;
 }
@@ -609,11 +671,11 @@ ul{
     /* transition-property: transform, background-color;
      transition-duration: 1000ms;
      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
-     transition: transform(0) 250ms cubic-bezier(0.4, 0, 0.2, 1);
+     transition: transform(0) 1300ms cubic-bezier(0.4, 0, 0.2, 1);
  }
  
  .figure:hover {
-     transform: scale(1.5);
+     transform: scale(1.7);
      /*background-color: greenyellow;*/
  }
  
@@ -700,10 +762,11 @@ ul{
 }
 
 .clients {
-   /* transition-property: transform, background-color;
-    transition-duration: 1000ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    /*transition-property: transform, background-color;*/
+    transition-property: transform;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+   /*transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);*/
 }
 
 .clients:hover {
@@ -879,10 +942,11 @@ ul{
 
 
 .glob {
-    /* transition-property: transform, background-color;
+    /* transition-property: transform, background-color; */
+     transition-property: transform;
      transition-duration: 1000ms;
-     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
-     transition: transform(0) 250ms cubic-bezier(0.4, 0, 0.2, 1);
+     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); 
+     /*transition: transform(0) 250ms cubic-bezier(0.4, 0, 0.2, 1);*/
  }
  
  .glob:hover {
@@ -1033,11 +1097,11 @@ ul{
     /* transition-property: transform, background-color;
      transition-duration: 1000ms;
      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
-     transition: transform(0) 250ms cubic-bezier(0.4, 0, 0.2, 1);
+     transition: transform(0) 1200ms cubic-bezier(0.4, 0, 0.2, 1);
  }
  
  .rectangle:hover {
-     transform: scaleY(2);
+     transform: scaleY(1.7);
      /*background-color: greenyellow;*/
  }
 
