@@ -233,7 +233,7 @@ ul{
     /* transition-property: transform, background-color;
      transition-duration: 1000ms;
      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
-     transition: transform(0) 900ms cubic-bezier(0.4, 0, 0.2, 1);
+     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
  }
  
  .hookup:hover {
@@ -671,12 +671,12 @@ ul{
     /* transition-property: transform, background-color;
      transition-duration: 1000ms;
      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
-     transition: transform(0) 1300ms cubic-bezier(0.4, 0, 0.2, 1);
+     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
  }
  
  .figure:hover {
      transform: scale(1.7);
-     /*background-color: greenyellow;*/
  }
  
 
@@ -763,15 +763,16 @@ ul{
 
 .clients {
     /*transition-property: transform, background-color;*/
-    transition-property: transform;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-   /*transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);*/
+  /*  transition-property: transform, background-color;
+    transition-duration: 500ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);*/
+    transition: transform 700ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 700ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients:hover {
     transform: rotate(180deg);
-    /*background-color: greenyellow;*/
+    /*color: greenyellow;*/
 }
 
 .client-cos-link {
@@ -943,15 +944,15 @@ ul{
 
 .glob {
     /* transition-property: transform, background-color; */
-     transition-property: transform;
+    /* transition-property: transform, background-color;
      transition-duration: 1000ms;
-     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); 
-     /*transition: transform(0) 250ms cubic-bezier(0.4, 0, 0.2, 1);*/
+     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
+     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
  }
  
  .glob:hover {
-     transform: skew(25deg);
-     /*background-color: greenyellow;*/
+     transform: scale(1.5);
  }
 
 
@@ -1097,7 +1098,7 @@ ul{
     /* transition-property: transform, background-color;
      transition-duration: 1000ms;
      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
-     transition: transform(0) 1200ms cubic-bezier(0.4, 0, 0.2, 1);
+     transition: transform 450ms cubic-bezier(0.4, 0, 0.2, 1);
  }
  
  .rectangle:hover {
@@ -1173,17 +1174,18 @@ ul{
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }*/
 
-.top-text-wrap {
-    position: relative;     /* привязуємо до картинки */
-    overflow: hidden;       /* все за кордоном батька приховати */
-    transition-property: background-color, transform;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
-}
 
 .top-text-wrap:hover .top-text {
     transform: translateY(0);
+}
+
+.top-text-wrap {
+    position: relative;     /* привязуємо до картинки */
+    overflow: hidden;       /* все за кордоном батька приховати */
+   /* transition-property: transform, background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);*/
+    transition: transform 400ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .top-text {
@@ -1201,7 +1203,7 @@ ul{
     padding-left: 24px;
     height: 100%;
     transform: translateY(100%);        /* опустити до низу */
-    transition: transform 300ms linear;
+    transition: transform 400ms linear;
     overflow: auto;                 /* якщо тексту забагато і не влазить */
 }
 

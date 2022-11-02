@@ -58,11 +58,11 @@
             <div class="main-container">
                 <h1 class="section-main">Ефективні рішення для <br>
                     вашого бізнесу</h1>
-                <button class="button-main" type="button" 
-                onClick='location.href="./модальне вікно.html"'>Замовити послугу</button>
+                <button class="button-main" type="button" data-modal-open>Замовити послугу</button>
             </div>
         </section>
 
+        <!--onClick='location.href="./модальне вікно.html"'-->
         <section class="descrip-section"> <!-- descrip -->
             <div class="main-container entrance">
                 <h2 class="visually-hidden">Галерея</h2> 
@@ -383,6 +383,16 @@
             </div>
         </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+            <button class="modal-close" type="button" data-modal-close>
+                <svg class="modal-close-icon" width-"18" height="18">
+                <use href="./img/icon.svg#icon-close"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
+    <script src="./js/modal.js"></script>
 </body>
 </html>
 
