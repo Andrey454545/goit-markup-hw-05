@@ -43,7 +43,7 @@ ul{
 }
 
 
-/* header */
+/*  ------------------  header  -----------------------*/
 
 .header-main {
     padding-top: 24px;
@@ -108,7 +108,7 @@ ul{
     text-decoration: none;
     position: relative;
 } 
-
+/*
 .list-html:hover {  
     color: var(--accent-color);
 } 
@@ -117,7 +117,7 @@ ul{
     color: var(--accent-color);
     background-color: var(--white-color);
     outline: 0;
-} 
+} */
 
 .list-html.current::after {
     content: '';
@@ -179,19 +179,40 @@ ul{
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
-    color: var(--title-text-color);
     text-decoration: none;
 }
 
-.block:hover {
-    color: var(--accent-color);
-}
+/*.barbers-cos-link:hover .barbers-cos-icon,
+.barbers-cos-link:focus .barbers-cos-icon {
+    fill: #FFFFFF;
+}*/
 
-.block:focus {
-    color: var(--accent-color);
-    background-color: var(--white-color);;
+.hookup {
+    fill: currentColor;
+    color: var(--title-text-color);
+    transition: transform 700ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 700ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 700ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 700ms cubic-bezier(0.4, 0, 0.2, 1);
+ }
+ 
+ .hookup:hover,
+ .hookup:focus {
     outline: 0;
-}
+    transform: scale(1.7);
+    background-color: var(--white-color); 
+    box-shadow: 2px 2px 2px rgb(228, 38, 203);
+    color: var(--accent-color);
+ }
+
+
+
+
+
+
+
+        /* ---------  header-contact  ---------- */
+
 
 .header-contact {
     margin-left: auto;
@@ -202,44 +223,6 @@ ul{
     margin-right: 0;
     height: 16px;
 }
-
-.email {
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
-    color: var(--accent-color);
-    text-decoration: none;
-    margin-right: 50px;
-}
-
-.email:hover,
-.email:focus {
-    color: var(--accent-color);
-    background-color: white;
-    outline: 0;
-}
-
-.email::before {
-    content: '';
-    display: inline-block;
-    width: 16px;
-    height: 12px;
-    background-image: url(../img/envelope\ \(hover\).png);
-    margin-right: 10px;
-}
-
-.hookup {
-    /* transition-property: transform, background-color;
-     transition-duration: 1000ms;
-     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
-     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
- }
- 
- .hookup:hover {
-     transform: scale(1.8);
-     /*background-color: greenyellow;*/
- }
 
 
 /*.email::after {
@@ -262,6 +245,7 @@ ul{
     color: var(--primary-text-color);
     text-decoration: none;          /* прибрати підкреслення */
     margin-right: 50px;
+    transition: color 700ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .email-label:hover,
@@ -269,32 +253,6 @@ ul{
     color: var(--accent-color);
     outline: 0;
 }
-
-/*.email-label::before {
-    content: '';
-    display: inline-block;
-    width: 16px;
-    height: 12px;
-    background-image: url(../img/envelope.png);
-    margin-right: 10px;
-}*/
-
-/*.number:hover,
-.number:focus {
-    color: var(--accent-color);
-    background-color: inherit;
-    outline: 0;
-}*/
-
-/*.number::before {
-    content: '';
-    display: inline-block;
-    width: 10px;
-    height: 16px;
-    background-image: url('../img/smartphone.png');
-    /*align-items: baseline;   
-    margin-right: 10px;
-}*/
 
 .apple {
     display: flex;
@@ -321,58 +279,20 @@ ul{
     text-decoration: none;      
     display: flex;
     align-items: center;
+    transition: color 700ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .number:hover,
 .number:focus,
 .number-icon:hover,
-.number-icon:focus {
-    fill: var(--accent-color); 
+.number-icon:focus { 
     color: var(--accent-color);
     outline: 0;
 }
 
 
-.barbers-cos-link {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    background-color: #FFFFFF;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
-.link {
-    background-size: 20px;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.barbers-cos-link:hover,
-.barbers-cos-link:focus {
-    background-color: var(--accent-color); 
-    outline: 0; 
-}
-
-.barbers-cos-icon {
-    fill: #AFB1B8;
-}
-
-.link:hover .barbers-cos-icon {
-    fill: #FFFFFF;
-}
-
-.link:focus .barbers-cos-icon {
-   fill: #FFFFFF;
-   
-}
-
-/*margin: 0 auto;    розміщення по середині*/
-
-
-
-/*   main   */
+/* -----------------  main  ---------------------- */
 
 .main-head {
     width: 1600px;
@@ -438,7 +358,7 @@ ul{
 
 
 
-/*  descrip  */
+/* -------------------- descrip ----------------------- */
                 /*прихований заголовок*/
                 
 .descrip-section {
@@ -536,7 +456,7 @@ ul{
 
 
 
-/*section-foto*/
+/* ----------------  section-foto  --------------------- */
 
 .foto-section {
     padding-top: 94px;
@@ -588,7 +508,7 @@ ul{
 
 
 
-/*  -  team  -   */
+/*  ----------------------  team  -----------------------   */
 
 .team-section {
     padding-top: 94px;
@@ -666,54 +586,43 @@ ul{
     width: 44px;
     height: 44px;
 }
-
-.figure {
-    /* transition-property: transform, background-color;
-     transition-duration: 1000ms;
-     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
-     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
-     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
- }
- 
- .figure:hover {
-     transform: scale(1.7);
- }
  
 
 .barbers-cos-link {
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    background-color: #FFFFFF;
+    background: #FFFFFF;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.link {
     background-size: 20px;
     background-repeat: no-repeat;
     background-position: center;
+    fill: currentColor;
+    color: #AFB1B8;
+    transition: transform 1000ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 1000ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 1000ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.barbers-cos-icon {
+    fill: currentColor;
 }
 
 .barbers-cos-link:hover,
 .barbers-cos-link:focus {
+    transform: scale(2);
     background-color: var(--accent-color); 
-    outline: 0; 
+    box-shadow: 5px -5px 5px rgb(117, 117, 243);
+    color: #FFFFFF;
 }
-
-.barbers-cos-icon {
-    fill: #AFB1B8;
-}
-
-.link:hover .barbers-cos-icon {
+/*
+.barbers-cos-link:hover .barbers-cos-icon,
+.barbers-cos-link:focus .barbers-cos-icon {
     fill: #FFFFFF;
-}
-
-.link:focus .barbers-cos-icon {
-   fill: #FFFFFF;
-   
-}
+}*/
 
 /*.fing::after {
     content: '';
@@ -730,7 +639,7 @@ ul{
 
 
 
-/*    client-section    */
+/*  --------------  client-section  ----------------  */
 
 
 .client-section {
@@ -761,19 +670,8 @@ ul{
     height: 92px;
 }
 
-.clients {
-    /*transition-property: transform, background-color;*/
-  /*  transition-property: transform, background-color;
-    transition-duration: 500ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);*/
-    transition: transform 700ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 700ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.clients:hover {
-    transform: rotate(180deg);
-    /*color: greenyellow;*/
-}
+
 
 .client-cos-link {
     width: 100%;
@@ -784,29 +682,37 @@ ul{
     justify-content: center;
     background-position: center;
     border-radius: 4px;
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    fill: currentColor;
+    color: #AFB1B8;
+    outline: 1px solid #AFB1B8;
+    transition: transform 700ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 700ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 700ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 700ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.client-icon {
+    fill: currentColor;
 }
 
 .client-cos-link:hover,
 .client-cos-link:focus {
-    background-color: white;
     outline: 1px solid var(--accent-color);
+    transform: rotate(180deg);
+    background-color: white;
+    box-shadow: 10px 5px 5px rgb(64, 64, 226);
+    color: var(--accent-color);
 }
 
-.link-cos {
-    background-size: 20px;
-    background-repeat: no-repeat;
-    background-position: center;
-    outline: 1px solid #AFB1B8;
-}
-
-.client-icon {
-    fill: #AFB1B8;
-}
-
-.link-cos:hover .client-icon,
-.link-cos:focus .client-icon {
+/*
+.client-cos-link:hover .client-icon,
+.client-cos-link:focus .client-icon {
     fill: var(--accent-color);
 }
+*/
 
 /*.four-fing::after {
     content: '';
@@ -942,20 +848,6 @@ ul{
 }
 
 
-.glob {
-    /* transition-property: transform, background-color; */
-    /* transition-property: transform, background-color;
-     transition-duration: 1000ms;
-     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
-     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
-     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
- }
- 
- .glob:hover {
-     transform: scale(1.5);
- }
-
-
 
 .links-cos-link {
     width: 100%;
@@ -965,17 +857,27 @@ ul{
     align-items: center;
     justify-content: center;
     background-color: rgba(255, 255, 255, 0.1);
+    fill: currentColor;
+    color: #FFFFFF;
+    transition-property: transform, background-color, box-shadow;
+    transition-duration: 700ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .links-cos-icon {
-    fill: #FFFFFF;
+    fill: currentColor;
 }
 
 .links-cos-link:focus,
 .links-cos-link:hover {
+    transform: scale(2);
     background-color: var(--accent-color);
-    outline: 0;
+    box-shadow: 5px -3px 5px rgb(64, 226, 199);
 }
+
+
+
+
 
 .backdrop {
     width: 100%;
@@ -1056,7 +958,7 @@ ul{
     justify-content: center;  /*вирівнює по центру бо є "display: flex" */
 }
 
-.button-head.current { 
+.button-head { 
     font-family: 'Roboto';
     font-weight: 500;
     font-size: 16px;
@@ -1073,15 +975,6 @@ ul{
     outline: 0;
 } 
 
-.button-head:hover,
-.button-head:focus {
-    background-color: var(--accent-color);
-    color: #FFFFFF;
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 
-    0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
-    cursor: pointer;
-}
 
 /*.five-fing::after {
     content: '';
@@ -1095,16 +988,20 @@ ul{
 }*/
 
 .rectangle {
-    /* transition-property: transform, background-color;
-     transition-duration: 1000ms;
-     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
-     transition: transform 450ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 1000ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 1000ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 1000ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 1000ms cubic-bezier(0.4, 0, 0.2, 1);
  }
  
- .rectangle:hover {
-     transform: scaleY(1.7);
-     /*background-color: greenyellow;*/
- }
+ .rectangle:hover,
+ .rectangle:focus {
+     transform: scaleY(1.5);
+     background-color: var(--accent-color);
+     box-shadow: 5px -3px 5px rgb(40, 241, 164);
+     color: #FFFFFF;
+     cursor: pointer;    /* курсор pointer */
+}
 
 
 .button-portfolio {
@@ -1124,26 +1021,15 @@ ul{
     outline: 0;
 }
 
-.button-portfolio:hover,
-.button-portfolio:focus {  
-    color: var(--white-color);
-    background-color: var(--accent-color);
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 
-    0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
-    cursor: pointer;        /* курсор pointer */
-} 
-
   
 
 
-/*    foto-wrap    */
+/* ------ foto-wrap -------- */
    
 .foto-wrap {
     display: flex;     /*розміщення в ряд*/
     flex-wrap: wrap; 
     gap: 30px;
-   /* width: calc((100%-60px) / 3); */
 }
 
 .foto-item {
@@ -1151,14 +1037,6 @@ ul{
     border: 1px solid #ECECEC;
 }
 
-/*.foto-item-shadow {
-    width: 370px;
-    border: 1px solid #ECECEC;
-    display: block;
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 
-    0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
-}*/
 
 .foto-item:hover {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 
@@ -1166,13 +1044,6 @@ ul{
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-
-/*.foto-item-shadow:hover,
-.foto-item-shadow:focus {
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 
-    0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
-}*/
 
 
 .top-text-wrap:hover .top-text {
@@ -1182,10 +1053,7 @@ ul{
 .top-text-wrap {
     position: relative;     /* привязуємо до картинки */
     overflow: hidden;       /* все за кордоном батька приховати */
-   /* transition-property: transform, background-color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);*/
-    transition: transform 400ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 1000ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .top-text {
